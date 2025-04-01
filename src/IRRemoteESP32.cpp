@@ -15,7 +15,7 @@ bool IRRemoteESP32::m_f_error = false;
 
 const int IRRemoteESP32::ir_button[20] = {0x19, 0x45, 0x46, 0x47, 0x44, 0x40, 0x43, 0x07, 0x15, 0x09, 0x16, 0x0d, 0x1c, 0x18, 0x5a, 0x52, 0x08, 0x00, 0x00, 0x00};
 
-IRRemoteESP32::IRRemoteESP32(uint8_t irPin) : m_ir_pin(irPin), m_t0(0), m_ir_num(0), m_key(-1) {
+IRRemoteESP32::IRRemoteESP32(uint8_t irPin) :  m_t0(0), m_ir_num(0),m_ir_pin(irPin), m_key(-1) {
     memset(m_ir_resultstr, 0, sizeof(m_ir_resultstr));
 
     Serial.begin(115200);
